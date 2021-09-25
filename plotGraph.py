@@ -1,8 +1,6 @@
 import serial
 import matplotlib.pyplot as plt
 import math
-import random
-import cv2
 
 plt.ion()
 fig = plt.figure()
@@ -25,8 +23,5 @@ while True:
 	cosine = math.cos(angle) 
 	plt.scatter(r*cosine, r*sine)
 	plt.pause(0.0001)
-	if cv2.waitKey(0) & 0xFF == ord('q'):
-		plt.close()
-		break
 		
 plt.close()
